@@ -1,94 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Lighthouse Island Bistro</title>
 <meta charset="utf-8">
+<title>Casita Sedona</title>
+
 <style>
-body { font-family:Verdana, Arial, sans-serif;
-       background-color: #00005D;
-}
-#wrapper { background-color: #b3c7e6; 
-           color: #000066;
-           width: 80%;
-		   margin: auto;
-           min-width:850px;
-} 
-#header { background-color: #869dc7;
-        color: #00005D; 
-        font-size: 150%; 
-        padding: 10px 10px 10px 155px;
-		background-image: url(lighthouselogo.jpg); 
-		background-repeat: no-repeat;
-}
-#nav { float: right;
-	   width: 150px;
-	   letter-spacing:0.1em;
-	   font-weight: bold;
-} 
-#content { background-color: #ffffff;
-           color: #000000;
-		   padding: 10px 20px;
-	       overflow: auto; 
-} 
-#footer {font-size:70%;
-         text-align: center;
-         padding: 10px;
-         background-color: #869dc7;
-}
-h2 { color: #869dc7; 
-     font-family: arial, sans-serif;
-}
-#floatright { margin: 10px;
-             float: right;
-}
-#nav {padding-left: 0; }
-#nav ul { list-style-type: none; 
-          margin: 0;
-          padding: 0;
+body {
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #ffffff;
 }
 
-#nav a { text-decoration: none; 
-         display: block;
-	     padding: 20px;    
-         background-color: #b3c7e6;     
-	     border-bottom: 1px solid #ffffff; 	 
+/* GRID AREA NAMES */
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+/* GRID CONTAINER */
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 150px 1fr 30%;
+  grid-template-rows: 100px auto 50px;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
 }
-#nav a:link { color: #ffffff; 
+
+/* HEADER */
+header {
+  background-image: url(showybg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-#nav a:visited { color: #eaeaea; }
-#nav a:hover { background-color: #eaeaea;
-              color: #869dc7;
+
+/* NAVIGATION */
+nav {
+  background-color: #2f5d6a;
+}
+
+nav a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #2f5d6a;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  color: #2f5d6a;
+}
+
+/* ASIDE */
+aside {
+  padding: 15px;
+}
+
+aside img {
+  max-width: 100%;
+  height: auto;
+}
+
+aside h3 {
+  color: #2f5d6a;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 70%;
+  padding: 15px;
+  background-color: #eaeaea;
 }
 </style>
 </head>
+
 <body>
+
 <div id="wrapper">
-  <div id="header">
-    <h1>Lighthouse Island Bistro</h1>
-    </div> <!-- end of header -->
-  <div id="nav">
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="map.html">Map</a>
-    <a href="contact.html">Contact</a>
-   </div> <!-- end of nav -->
-  <div id="content"> 
-   	<h2>Locally Roasted Free-Trade Coffee</h2>
-    <p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot or cold.</p>
-    <h2>Specialty Pastries</h2>
-    <p>Enjoy a selection of our fresh-baked, organic pastries, including 
-  fresh-fruit muffins, scones, croissants, and cinammon rolls.</p>
-     <img src="lighthouseisland.jpg" width="250" height="355" id="floatright" alt="Lighthouse Island" />
-  	<h2>Lunchtime is Anytime</h2>
-    <p>Savor delicious wraps and sandwiches on hearty, whole-grain breads with locally-grown salad, fruit, and vegetables. </p>
-    <h2>Panoramic View</h2>
-	<p>Take in some scenery!</p>
-	<p>The top of our lighthouse offers a panoramic view of the countryside. Challenge your friends to climb our 100-stair tower.</p>
-   </div> <!-- end of content -->
-   <div id="footer">Copyright &copy; 2012
-   </div><!-- end of footer -->
-  </div> <!-- end of wrapper -->
+
+  <header></header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Rooms</a>
+    <a href="#">Specials</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Located in the Heart of Sedona</h2>
+    <p>
+      At Casita Sedona Bed & Breakfast you can relax in a casual, relaxed,
+      southwestern setting just minutes from world-famous red rock views.
+    </p>
+
+    <h2>Luxurious Rooms</h2>
+    <p>
+      Stay in well-appointed rooms featuring private baths, plush linens,
+      and breathtaking views of the surrounding landscape.
+    </p>
+
+    <h2>Hearty Breakfast</h2>
+    <p>
+      Each day begins with a freshly prepared breakfast including your choice
+      of delicious hot entrees, fruit, and coffee.
+    </p>
+  </main>
+
+  <aside>
+    <img src="plsthumb.jpg" alt="Sedona scenery">
+    <h3>Guided Hikes</h3>
+    <p>
+      Explore Sedona’s famous red rock trails with guided hikes suitable for
+      all skill levels.
+    </p>
+  </aside>
+
+  <footer>
+    Copyright &copy; 2020
+  </footer>
+
+</div>
+
 </body>
 </html>
-
-
